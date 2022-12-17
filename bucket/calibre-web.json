@@ -1,0 +1,34 @@
+{
+    "version": "V0.6.19-Daria",
+    "description": "📚 Web app for browsing, reading and downloading eBooks stored in a Calibre database",
+    "homepage": "https://github.com/janeczku/calibre-web",
+    "license": "GPL-3.0 license",
+    "depends": [
+        "msys2",
+        "python"
+    ],
+    "url": "https://files.pythonhosted.org/packages/py3/c/calibreweb/calibreweb-0.6.19-py3-none-any.whl",
+    "hash": "0eae04831cd55adb40987326c679d83917fdfeeaf7b70ef9bfa93a62cc013d73",
+    "installer": {
+        "script": [
+            "Push-Location \"$dir\"",
+            "python -m venv .",
+            ".\\Scripts\\activate",
+            "try {",
+            "    python -m pip install --prefer-binary --global-option --compiler=mingw32 \"$fname\"",
+            "}",
+            "finally {",
+            "    Remove-Item \"$fname\"",
+            "    deactivate",
+            "    Pop-Location",
+            "}"
+        ]
+    },
+    "bin": "Scripts\\calibreweb.exe",
+    "checkver": {
+        "github": "https://github.com/janeczku/calibre-web"
+    },
+    "autoupdate": {
+        "url": "https://files.pythonhosted.org/packages/py3/c/calibreweb/calibreweb-$version-py3-none-any.whl"
+    }
+}
