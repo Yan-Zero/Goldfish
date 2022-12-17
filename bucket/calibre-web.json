@@ -1,5 +1,5 @@
 {
-    "version": "V0.6.19-Daria",
+    "version": "0.6.19",
     "description": "📚 Web app for browsing, reading and downloading eBooks stored in a Calibre database",
     "homepage": "https://github.com/janeczku/calibre-web",
     "license": "GPL-3.0 license",
